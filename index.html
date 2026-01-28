@@ -185,7 +185,7 @@
 <section id="contato">
     <h2>Contato</h2>
     <div class="contato">
-        <form>
+        <form id="formContato">
             <label for="nome">Nome</label>
             <input type="text" id="nome" name="nome" required>
 
@@ -197,6 +197,7 @@
 
             <button type="submit">Enviar</button>
         </form>
+        <p id="statusEnvio" style="text-align:center; margin-top:15px;"></p>
     </div>
 </section>
 
@@ -205,5 +206,32 @@
     <p>&copy; 2026 - @dezza_hair | Todos os direitos reservados</p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+    emailjs.init('SEU_PUBLIC_KEY'); // substitua pela sua Public Key
+})();
+
+const form = document.getElementById('formContato');
+const statusEnvio = document.getElementById('statusEnvio');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.send('SEU_SERVICE_ID', 'SEU_TEMPLATE_ID', {
+        nome: form.nome.value,
+        email: form.email.value,
+        mensagem: form.mensagem.value
+    })
+    .then(function() {
+        statusEnvio.style.color = '#25D366';
+        statusEnvio.innerText = 'Mensagem enviada com sucesso! 💚';
+        form.reset();
+    }, function(error) {
+        statusEnvio.style.color = 'red';
+        statusEnvio.innerText = 'Erro ao enviar. Tente novamente.';
+    });
+});
+</script>
 </body>
 </html>
