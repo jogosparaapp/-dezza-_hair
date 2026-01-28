@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salão Bella Estilo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f6f6f6;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #c2185b, #880e4f);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+        nav {
+            background-color: #880e4f;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 12px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        section h2 {
+            text-align: center;
+            color: #880e4f;
+            margin-bottom: 30px;
+        }
+        .servicos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #c2185b;
+        }
+        .card p {
+            font-size: 0.95rem;
+        }
+        .contato {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        .contato label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .contato input, .contato textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .contato button {
+            margin-top: 20px;
+            background-color: #c2185b;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contato button:hover {
+            background-color: #880e4f;
+        }
+        footer {
+            background-color: #880e4f;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Salão Bella Estilo</h1>
+    <p>Beleza, elegância e cuidado em cada detalhe</p>
+</header>
+
+<nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+        O Salão Bella Estilo é especializado em realçar sua beleza com técnicas modernas,
+        produtos de alta qualidade e profissionais experientes. Nosso objetivo é proporcionar
+        uma experiência única de cuidado e bem-estar.
+    </p>
+</section>
+
+<section id="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="servicos">
+        <div class="card">
+            <h3>Corte Feminino</h3>
+            <p>Cortes modernos e personalizados para valorizar seu estilo.</p>
+        </div>
+        <div class="card">
+            <h3>Coloração</h3>
+            <p>Técnicas avançadas para cores vibrantes e saudáveis.</p>
+        </div>
+        <div class="card">
+            <h3>Escova & Finalização</h3>
+            <p>Acabamento perfeito para qualquer ocasião.</p>
+        </div>
+        <div class="card">
+            <h3>Tratamentos Capilares</h3>
+            <p>Hidratação, reconstrução e nutrição profunda.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contato">
+    <h2>Contato</h2>
+    <div class="contato">
+        <form>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 - Salão Bella Estilo | Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
